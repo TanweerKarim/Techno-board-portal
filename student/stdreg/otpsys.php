@@ -53,7 +53,7 @@ curl_close($ch);
     $mail->Host = "smtp.gmail.com";
     $mail->SMTPAuth = true;
     $mail->Username ="noreplytechnoportal@gmail.com";
-    $mail->Password ="tanlovemomndad";
+    $mail->Password ="********";
     $mail->Port =465;
     $mail->SMTPSecure ="ssl";
     $mail->isHTML();
