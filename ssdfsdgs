@@ -1,0 +1,1059 @@
+$sub1t=$_POST['sub1t'];
+$sub2t=$_POST['sub2t'];
+$sub3t=$_POST['sub3t'];
+$sub4t=$_POST['sub4t'];
+$sub5t=$_POST['sub5t'];
+$sub6t=$_POST['sub6t'];
+$sub1p=$_POST['sub1p'];
+$sub2p=$_POST['sub2p'];
+$sub3p=$_POST['sub2p'];
+$sub4p=$_POST['sub4p'];
+$sub5p=$_POST['sub5p'];
+$sub6p=$_POST['sub6p'];
+$sub1s=$_POST['sub1s'];
+$sub2s=$_POST['sub2s'];
+$sub3s=$_POST['sub3s'];
+$sub4s=$_POST['sub4s'];
+$sub5s=$_POST['sub5s'];
+$sub6s=$_POST['sub6s'];
+if($sem=='First')
+{
+$sub1t=$_POST['sub1t'];
+$sub2t=$_POST['sub2t'];
+$sub3t=$_POST['sub3t'];
+$sub4t=$_POST['sub4t'];
+$sub5t=$_POST['sub5t'];
+$sub6t=$_POST['sub6t'];
+$sub1p=$_POST['sub1p'];
+$sub2p=$_POST['sub2p'];
+$sub1s=$_POST['sub1s'];
+$sub2s=$_POST['sub2s'];
+$sub3s=$_POST['sub3s'];
+$sub4s=$_POST['sub4s'];
+$_SESSION['reg']=$reg;
+$_SESSION['sem']=$sem;
+$sql="INSERT INTO `admit_form_data` (`reg_no`, `name`, `sem`, `branch`, `f_name`, `college`, `sub1t`, `sub2t`, `sub3t`, `sub4t`, `sub5t`,`sub6t`, `sub1p`, `sub2p`, `sub1s`, `sub2s`, `sub3s`, `sub4s`) VALUES ('$reg','$name','$sem','$branch','$fname','$clgname','$sub1t','$sub2t','$sub3t','$sub4t','$sub5t','$sub6t','$sub1p',$sub2p','$sub1s','$sub2s','$sub3s','$sub4s')";
+if(mysqli_query($con,$sql))
+{
+  echo "<script>alert('data inserted')</script>";
+}
+if(mysqli_query($con,$sql))
+{
+  echo "<script>alert('data not inserted')</script>";
+}
+}
+
+
+
+
+
+
+<tr>
+<td colspan='2'><h3 align='CENTER' style='background-color:lightgreen;width:100%;height:30px;;border-radius:5px;border:none;'>THEORY PAPERS</h3></td>
+</tr>
+<tr>
+<td colspan='2'><input type='checkbox' name='sub1t' value='$fetch1[3]'>$fetch1[3]</td>
+</tr>
+<tr>
+<td colspan='2'><input type='checkbox' name='sub2t' value='$fetch1[4]'>$fetch1[4]</td>
+</tr>
+<tr>
+<td colspan='2'><input type='checkbox' name='sub3t' value='$fetch1[5]'>$fetch1[5]</td>
+</tr>
+<tr>
+<td colspan='2'><input type='checkbox' name='sub4t' value='$fetch1[6]'>$fetch1[6]</td>
+</tr>
+<tr>
+<td colspan='2'><input type='checkbox' name='sub5t' value='$fetch1[7]'>$fetch1[7]</td>
+</tr>
+</tr>
+<tr>
+<td colspan='2'><input type='checkbox' name='sub6t' value='$fetch1[8]'>$fetch1[8]</td>
+</tr>
+<tr>
+<td colspan='2'><h3 align='CENTER' style='background-color:lightgreen;width:100%;height:30px;;border-radius:5px;border:none;'>PRACTICAL PAPERS</h3></td>
+</tr>
+<tr>
+<td colspan='2'><input type='checkbox' name='sub1p' value='$fetch1[13]'>$fetch1[13]</td>
+</tr>
+<tr>
+<td colspan='2'><input type='checkbox' name='sub2p' value='$fetch1[14]'>$fetch1[14]</td>
+</tr>
+<tr>
+<td colspan='2'><h3 align='CENTER' style='background-color:lightgreen;width:100%;height:30px;;border-radius:5px;border:none;'>TEAMWORK PAPERS</h3></td>
+</tr>
+<tr>
+<td colspan='2'><h3 align='CENTER' style='background-color:lightgreen;width:100%;height:30px;;border-radius:5px;border:none;'>SESSIONAL PAPERS</h3></td>
+</tr>
+<tr>
+<td colspan='2'><input type='checkbox' name='sub1s' value='$fetch1[20]'>$fetch1[20]</td>
+</tr>
+<tr>
+<td colspan='2'><input type='checkbox' name='sub2s' value='$fetch1[21]'>$fetch1[21]</td>
+</tr>
+<tr>
+<td colspan='2'><input type='checkbox' name='sub3s' value='$fetch1[22]'>$fetch1[22]</td>
+</tr>
+<tr>
+<td colspan='2'><input type='checkbox' name='sub4s' value='$fetch1[23]'>$fetch1[23]</td>
+</tr>
+<tr>
+<td colspan='2'><h3 align='CENTER' style='background-color:lightgreen;width:100%;height:30px;;border-radius:5px;border:none;'>ORAL PAPERS</h3></td>
+</tr>
+
+
+
+
+
+
+
+var mrksreg = document.getElementById('mkreg').value;
+var mrkssem = document.getElementById('mksem1').value;
+var mrkssub1t = document.getElementById('mksub1t').value;
+var mrkssub2t = document.getElementById('mksub2t').value;
+var mrkssub3t = document.getElementById('mksub3t').value;
+var mrkssub4t = document.getElementById('mksub4t').value;
+var mrkssub5t = document.getElementById('mksub5t').value;
+var mrkssub6t = document.getElementById('mksub6t').value;
+var mrkssub1p = document.getElementById('mksub1p').value;
+var mrkssub2p = document.getElementById('mksub2p').value;
+var mrkssub3p = document.getElementById('mksub3p').value;
+var mrkssub4p = document.getElementById('mksub4p').value;
+var mrkssub5p = document.getElementById('mksub5p').value;
+var mrkssub6p = document.getElementById('mksub6p').value;
+var mrkssub1s = document.getElementById('mksub1s').value;
+var mrkssub2s = document.getElementById('mksub2s').value;
+var mrkssub3s = document.getElementById('mksub3s').value;
+var mrkssub4s = document.getElementById('mksub4s').value;
+var mrkssub5s = document.getElementById('mksub5s').value;
+var mrkssub6s = document.getElementById('mksub6s').value;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+echo "<br>
+<table align='center'><tr><td>Reg.No.</td>
+<td>:</td>
+<td>$res[0]</td>
+<td rowspan='4'>
+<img style='width:120px;height:130px;' src='upload/$pics[5]'>
+</td></tr>
+  <tr><td>Name</td><td>:</td><td>$pics[1]</td></tr>";
+  echo "<tr><td>Semester</td><td>:</td><td>Fourth Semester</td></tr>";
+
+echo "<tr><td>College Name</td><td>:</td><td>Al-Kabir Polytechnic</td><tr></table>";
+echo "<br><table border='1px' align='center' cellpadding='15px' style='border-collapse:collapse;'>
+<tr><th>Reg.No</th><th>$pics[0]</th></tr>
+<tr><th>Name</th><th>$pics[1]</th></tr>
+<tr><th>Branch</th><th>$pics[3]</th></tr>
+<tr><th>Semester</th><th>$pics[2]</th></tr>
+<tr><th>$pics[6]</th><th id='tan1'>$res[1]</th></tr>
+<tr><th>$pics[7]</th><th id='tan2'>$res[2]</th></tr>
+<tr><th>$pics[8]</th><th id='tan3'>$res[3]</th></tr>
+<tr><th>$pics[9]</th><th id='tan4'>$res[4]</th></tr>
+<tr><th>$pics[10]</th><th id='tan5'>$res[5]</th></tr>
+<tr><th>$pics[11]</th><th id='tan6'>$res[6]</th></tr>
+<tr><th>$pics[12]</th><th id='tan7'>$res[7]</th></tr>
+";
+$sum = $res[1]+$res[2]+$res[3]+$res[4]+$res[5]+$res[6]+$res[7];
+$per = ($res[3]+$res[4]+$res[5]+$res[6]+$res[7]+$res[8]+$res[9])/8;
+echo "<tr><th>SESSIONAL</th><th id='tan8'></th></tr>
+<tr><th>Total</th><th>$sum</th></tr>";
+if($res[3]>=40&&$res[4]>=40&&$res[5]>=40&&$res[6]>=40&&$res[7]>=40&&$res[8]>=20&&$res[9]>=20&&$res[10]>=40)
+{
+    echo "<tr><th>Percentage</th><th>$per%</th></tr>
+         <tr><th>PASS/FAIL</th><th>PASS</th></tr>";
+         $sql="update student_detail set sem = 'Fifth' where reg_no = '$res[0]'";
+         $query=mysqli_query($con,$sql);
+}
+else {
+    echo "<tr><th>Percentage</th><th><th>--</th><tr>
+         <tr><th>PASS/FAIL</th><th id='tan9'></th></tr>";
+}
+if($per>=75)
+{
+  echo "<tr><th>Class</th><th>1st Class Distinction</th></tr>";
+}
+else if($per>60&&$per<75)
+{
+  echo "<tr><th>Class</th><th>1st Class</th></tr>";
+}
+else if($per>40&&$per<60)
+{
+  echo "<tr><th>Class</th><th>2nd Class</th></tr>";
+}
+else {
+  echo "<tr><th>Class</th><th>--</th></tr>";
+}
+}
+else {
+  echo "<script>window.alert('Enter correct semester')</script>";
+}
+
+
+
+
+var sub3p=<?php echo json_encode($marksftc[15]); ?>;
+var sub4p=<?php echo json_encode($marksftc[16]); ?>;
+var sub5p=<?php echo json_encode($marksftc[17]); ?>;
+var sub6p=<?php echo json_encode($marksftc[18]); ?>;
+var sub5s=<?php echo json_encode($marksftc[23]); ?>;
+var sub6s=<?php echo json_encode($marksftc[24]); ?>;
+
+
+
+
+<script>
+var dm=<?php echo json_encode($res[3]); ?>;
+if (dm<40)
+{
+  document.getElementById('tan1').innerHTML=dm+'*';
+  document.getElementById('tan1').style.backgroundColor='red';
+}
+else
+{
+document.getElementById('tan1').innerHTML=dm;
+document.getElementById('tan1').style.backgroundColor='green';
+}
+</script>
+<script type="text/javascript">
+ var dbms=<?php echo json_encode($res[4]); ?>;
+ if (dbms<40)
+ {
+   document.getElementById('tan2').innerHTML=dbms+'*';
+   document.getElementById('tan2').style.backgroundColor='red';
+ }
+ else
+ {
+ document.getElementById('tan2').innerHTML=dbms;
+ document.getElementById('tan2').style.backgroundColor='green';
+ }
+</script>
+<script type="text/javascript">
+ var chp=<?php echo json_encode($res[5]); ?>;
+ if (chp<40)
+ {
+   document.getElementById('tan3').innerHTML=chp+'*';
+   document.getElementById('tan3').style.backgroundColor='red';
+ }
+ else
+ {
+ document.getElementById('tan3').innerHTML=chp;
+ document.getElementById('tan3').style.backgroundColor='green';
+ }
+</script>
+<script type="text/javascript">
+ var os=<?php echo json_encode($res[6]); ?>;
+ if (os<40)
+ {
+   document.getElementById('tan4').innerHTML=os+'*';
+   document.getElementById('tan4').style.backgroundColor='red';
+ }
+ else
+ {
+ document.getElementById('tan4').innerHTML=os;
+ document.getElementById('tan4').style.backgroundColor='green';
+ }
+</script>
+<script type="text/javascript">
+ var dccn=<?php echo json_encode($res[7]); ?>;
+ if (dccn<40)
+ {
+   document.getElementById('tan5').innerHTML=dccn+'*';
+   document.getElementById('tan5').style.backgroundColor='red';
+ }
+ else
+ {
+ document.getElementById('tan5').innerHTML=dccn;
+ document.getElementById('tan5').style.backgroundColor='green';
+ }
+</script>
+<script type="text/javascript">
+ var dsp=<?php echo json_encode($res[8]); ?>;
+ if (dsp<20)
+ {
+   document.getElementById('tan6').innerHTML=dsp+'*';
+   document.getElementById('tan6').style.backgroundColor='red';
+ }
+ else
+ {
+ document.getElementById('tan6').innerHTML=dsp;
+ document.getElementById('tan6').style.backgroundColor='green';
+ }
+</script>
+<script type="text/javascript">
+ var dbmsp=<?php echo json_encode($res[9]); ?>;
+ if (dbmsp<20)
+ {
+   document.getElementById('tan7').innerHTML=dbmsp+'*';
+   document.getElementById('tan7').style.backgroundColor='red';
+ }
+ else
+ {
+ document.getElementById('tan7').innerHTML=dbmsp;
+ document.getElementById('tan7').style.backgroundColor='green';
+ }
+</script>
+<script type="text/javascript">
+ var ses=<?php echo json_encode($sumsum); ?>;
+ if (ses<40)
+ {
+   document.getElementById('tan8').innerHTML=ses+'*';
+   document.getElementById('tan8').style.backgroundColor='red';
+ }
+ else
+ {
+ document.getElementById('tan8').innerHTML=ses;
+ document.getElementById('tan8').style.backgroundColor='green';
+ }
+}
+</script>
+
+
+
+
+
+
+if(sem=='First')
+{
+
+  var sub1t=<?php echo json_encode($marksftc[7]); ?>;
+  var sub2t=<?php echo json_encode($marksftc[8]); ?>;
+  var sub3t=<?php echo json_encode($marksftc[9]); ?>;
+  var sub4t=<?php echo json_encode($marksftc[10]); ?>;
+  var sub5t=<?php echo json_encode($marksftc[11]); ?>;
+  var sub6t=<?php echo json_encode($marksftc[12]); ?>;
+  var sub1p=<?php echo json_encode($marksftc[13]); ?>;
+  var sub2p=<?php echo json_encode($marksftc[14]); ?>;
+  var sub1s=<?php echo json_encode($marksftc[19]); ?>;
+  var sub2s=<?php echo json_encode($marksftc[20]); ?>;
+  var sub3s=<?php echo json_encode($marksftc[21]); ?>;
+  var sub4s=<?php echo json_encode($marksftc[22]); ?>;
+if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=40&&sub6t>=40&&>=20&&sub1p>=40&&sub2p>=40&&sub1s>=40&&sub2s>=40&&sub3s>=40&&sub4s>=40)
+{
+  document.getElementById('tan9').innerHTML='Pass';
+  document.getElementById('tan9').style.backgroundColor='green';
+}
+else {
+  document.getElementById('tan9').innerHTML='Fail';
+  document.getElementById('tan9').style.backgroundColor='red';
+}
+}
+<?php echo json_encode($subj[2]); ?>;
+
+
+
+
+
+
+
+
+
+if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+{
+  document.getElementById('tan15').innerHTML='Pass';
+  document.getElementById('tan15').style.backgroundColor='green';
+}
+else {
+  if(sub1t<=40&&sub2t<=40&&sub3t<=40&&sub4t<=40&&sub5t<=25&&sub6t<=25&&sub1p<=25&&sub2p<=25&&sub1s<=25&&sub2s<=25&&sub3s<=25&&sub4s<=25)
+  {
+    document.getElementById('tan14').innerHTML='---';
+    document.getElementById('tan15').innerHTML='Fail';
+    document.getElementById('tan15').style.backgroundColor='red';
+  }
+  else{
+    if(sub1t<=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t<=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t<=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t<=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t<=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t<=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p<=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p<=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s<=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s<=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s<=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s<=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t<=40&&sub2t<=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t<=40&&sub2t>=40&&sub3t<=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t<=40&&sub2t>=40&&sub3t>=40&&sub4t<=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t<=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t<=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t<=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t<=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t<=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p<=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t<=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p<=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t<=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s<=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t<=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s<=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t<=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s<=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t<=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s<=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t<=40&&sub3t<=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t<=40&&sub3t>=40&&sub4t<=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t<=40&&sub3t>=40&&sub4t>=40&&sub5t<=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t<=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t<=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t<=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p<=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t<=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p<=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t<=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s<=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t<=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s<=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t<=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s<=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t<=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s<=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t<=40&&sub4t<=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t<=40&&sub4t>=40&&sub5t<=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t<=40&&sub4t>=40&&sub5t>=25&&sub6t<=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t<=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p<=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t<=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p<=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t<=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s<=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t<=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s<=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t<=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s<=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t<=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s<=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t<=40&&sub5t<=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t<=40&&sub5t>=25&&sub6t<=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t<=40&&sub5t>=25&&sub6t>=25&&sub1p<=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t<=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p<=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t<=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s<=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t<=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s<=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t<=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s<=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t<=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s<=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t<=25&&sub6t<=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t<=25&&sub6t>=25&&sub1p<=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t<=25&&sub6t>=25&&sub1p>=25&&sub2p<=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t<=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s<=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t<=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s<=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t<=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s<=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t<=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s<=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t<=25&&sub1p<=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t<=25&&sub1p>=25&&sub2p<=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t<=25&&sub1p>=25&&sub2p>=25&&sub1s<=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t<=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s<=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t<=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s<=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t<=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s<=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p<=25&&sub2p<=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p<=25&&sub2p>=25&&sub1s<=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p<=25&&sub2p>=25&&sub1s>=25&&sub2s<=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p<=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s<=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p<=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s<=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p<=25&&sub1s<=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p<=25&&sub1s>=25&&sub2s<=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p<=25&&sub1s>=25&&sub2s>=25&&sub3s<=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p<=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s<=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s<=25&&sub2s<=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s<=25&&sub2s>=25&&sub3s<=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s<=25&&sub2s>=25&&sub3s>=25&&sub4s<=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s<=25&&sub3s<=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s<=25&&sub3s>=25&&sub4s<=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s<=25&&sub4s<=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t<=40&&sub2t<=40&&sub3t<=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t<=40&&sub2t>=40&&sub3t>=40&&sub4t<=40&&sub5t<=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t<=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t<=25&&sub1p<=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t<=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p<=25&&sub1s<=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t<=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s<=25&&sub3s<=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t<=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s<=25&&sub4s<=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t<=40&&sub3t<=40&&sub4t<=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t<=40&&sub3t>=40&&sub4t>=40&&sub5t<=25&&sub6t<=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t<=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p<=25&&sub2p<=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t<=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s<=25&&sub2s<=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t<=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s<=25&&sub4s<=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t<=40&&sub4t<=40&&sub5t<=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t<=40&&sub4t>=40&&sub5t>=25&&sub6t<=25&&sub1p<=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t<=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p<=25&&sub1s<=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t<=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s<=25&&sub3s<=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t<=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s<=25&&sub4s<=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t<=40&&sub5t<=25&&sub6t<=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t<=40&&sub5t>=25&&sub6t>=25&&sub1p<=25&&sub2p<=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t<=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s<=25&&sub2s<=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t<=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s<=25&&sub4s<=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t<=25&&sub6t<=25&&sub1p<=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t<=25&&sub6t>=25&&sub1p>=25&&sub2p<=25&&sub1s<=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t<=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s<=25&&sub3s<=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t<=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s<=25&&sub4s<=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t<=25&&sub1p<=25&&sub2p<=25&&sub1s>=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t<=25&&sub1p>=25&&sub2p>=25&&sub1s<=25&&sub2s<=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t<=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s>=25&&sub3s<=25&&sub4s<=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p<=25&&sub2p<=25&&sub1s<=25&&sub2s>=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p<=25&&sub2p>=25&&sub1s>=25&&sub2s<=25&&sub3s<=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p<=25&&sub1s<=25&&sub2s<=25&&sub3s>=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p<=25&&sub1s>=25&&sub2s>=25&&sub3s<=25&&sub4s<=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s<=25&&sub2s<=25&&sub3s<=25&&sub4s>=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s<=25&&sub2s>=25&&sub3s<=25&&sub4s<=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else if(sub1t>=40&&sub2t>=40&&sub3t>=40&&sub4t>=40&&sub5t>=25&&sub6t>=25&&sub1p>=25&&sub2p>=25&&sub1s>=25&&sub2s<=25&&sub3s<=25&&sub4s<=25)
+    {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Promoted';
+      document.getElementById('tan15').style.backgroundColor='Gray';
+    }
+    else {
+      document.getElementById('tan14').innerHTML='---';
+      document.getElementById('tan15').innerHTML='Fail';
+      document.getElementById('tan15').style.backgroundColor='red';
+    }
+  }
+}

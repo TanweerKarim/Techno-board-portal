@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Techno Board</title>
+    <link rel = "icon" href ="srcimgs/tit.png" type = "image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    .box
+    {
+      width:200px;
+      height:200px;
+      position: absolute;
+      top: 50%;
+      left:50%;
+      transform: translate(-50%,-50%);
+      overflow: hidden;
+    }
+    .box .b{
+      border-radius: 50%;
+      border-left: 4px solid;
+      border-top: 4px solid;
+      border-right: 4px solid transparent !important;
+      border-bottom:4px solid transparent !important;
+      position: absolute;
+      top: 30%;
+      left:50%;
+      transform: translate(-50%,-50%);
+      animation: ro 2s infinite;
+    }
+    .box .b1{
+      border-color: #4a69bd;
+      width: 120px;
+      height:120px;
+      animation-delay: 0.2s;
+    }
+    .box .b2{
+      border-color: #f6b93b;
+      width: 100px;
+      height:100px;
+      animation-delay: 0.4s;
+    }
+    .box .b3{
+      border-color: #2ecc71;
+      width: 80px;
+      height:80px;
+      animation-delay: 0.6s;
+    }
+    .box .b4{
+      border-color: #34495e;
+      width: 60px;
+      height:60px;
+      animation-delay: 0.8s;
+    }
+    @keyframes ro {
+      0%{
+        transform: translate(-50%,-50%) rotate(0deg);
+      }
+      50%{
+        transform: translate(-50%,-50%) rotate(-360deg);
+      }
+      100%{
+        transform: translate(-50%,-50%) rotate(0deg);
+      }
+    }
+</style>
+  </head>
+  <body style="background-image:url(srcimgs/mobile.jpg);background-repeat:no-repeat;background-size:2000px 3000px;">
+    <div id="s5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-8">
+          <br><br><br><br><br>
+          <img class="img-responsive " src="srcimgs/banner.png" style="height:100%;width:100%;">
+        </div>
+        <div class="col-md-2">
+
+        </div>
+      </div>
+
+
+    </div>
+      <div class="box">
+        <div class="b b1"></div>
+        <div class="b b2"></div>
+        <div class="b b3"></div>
+        <div class="b b4"></div>
+      </div><br><br><br><br><br><br><br><br>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+
+          </div>
+          <div class="col-md-8">
+            <br><br><br><br><br>
+          </div>
+          <div class="col-md-2">
+
+          </div>
+        </div>
+
+
+      </div>
+    </div>-->
+    <div class="container" id="s1" style="display:none;">
+      <div class="row">
+        <div class="col-sm-1 col-xs-12">
+
+        </div>
+        <div class="col-xs-12 col-sm-10">
+      <br>
+      <img class="img-responsive " src="srcimgs/banner.png" style="height:100%;width:100%;">
+    </div>
+    <div class="col-sm-1">
+    </div>
+    </div>
+    </div>
+    <br>
+
+    <nav class="navbar navbar-inverse container" id="s2" style="display:none;">
+      <div class="container-fluid">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Techno Board</a>
+    <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="resources/aboutus.php">About Us</a></li>
+          <li><a href="resources/syllabus.php">Syllabus</a></li>
+          <li><a href="resources/incap.php">Intake Capacity</a></li>
+          <li><a href="resources/contactus.php">Contact Us</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="resources/admin.php"><span class="glyphicon glyphicon-log-in"></span> Admin Login</a></li>
+        </ul>
+      </div>
+    </div>
+    </nav>
+    <div class="container" id="s3" style="display:none;">
+      <div class="row">
+        <div class="col-sm-6 col-xs-12">
+          <h1>Techno Board Portal</h1>
+          <p style="font-size:16px;">Techno Board Portal is a Portal which enable student
+to register, Fill examination form, Download Admit card.
+New features such as online payment for new registration
+and examination. Now student can view there result online
+and can even Download a provisional Marksheet till 5th
+semester. There is a admin panal where the admin can
+update student details, insert marks scored by students,
+update marks scored, declare the date of Registration,
+Exam form,admit card, result. Admin can even add
+subject if a new syllabus is introduced.
+      </p>
+        </div>
+        <div class="col-sm-6 col-xs-12" style="padding-left:100px;">
+          <h1 style="color:green;">Latest Updates</h1>
+        <table cellpadding="5" style="border:1px solid red;height:230px;">
+          <tr>
+            <td>
+              <marquee direction="up" onmouseover="this.stop();" onmouseout="this.start();"><table style="width:100%;height:100%;">
+          <tr>
+            <td>JUT Affilation Form 19-20</td>
+          </tr>
+          <tr>
+            <td> Academic Calendar</td>
+          </tr>
+          <tr>
+            <td>Affiliated Institutes</td>
+          </tr>
+          <tr>
+            <td>Intake Capacity</td>
+          </tr>
+          <tr>
+            <td>Related Sites</td>
+          </tr>
+          <tr>
+            <td>Downloadable Syllabus</td>
+          </tr>
+          <tr>
+            <td>Examination rule(Effected from session 2011-12)</td>
+          </tr>
+          <tr>
+            <td>Re-Tender Notice For Drawing Sheet</td>
+          </tr>
+        </table></marquee>
+        </td>
+      </tr>
+        </table>
+        </div>
+        <div class="col-sm-12 col-xs-12">
+          <h2 style="color:orange;">Announcement</h2>
+          <ul>
+            <li>This new website might help you all a lot</li>
+            <li>Guidelines for New Registration</li>
+          </ul>
+          <h3 style="color:blue;">Notification</h3>
+          <ul>
+            <li>This site is still under development</li>
+          </ul>
+        </div>
+        <div class="col-sm-12 col-xs-12">
+          <table align="center" style="width:100%;">
+            <tr>
+              <td><br><br></td>
+            </tr>
+            <tr>
+              <td></td>
+            </tr>
+          <tr>
+            <td><button id="t2" type="button" style="height:60px;width:100%;background-color:#337ab7;color:white;border:none;border-radius:10px 10px 10px 10px;" onclick="reg()">Click here For new Registration</button></td>
+          </tr>
+          <tr>
+            <td><br></td>
+          </tr>
+          <tr>
+            <td><button id="t2"type="button" style="height:60px;width:100%;background-color:#337ab7;border:none;color:white;border-radius:10px 10px 10px 10px;" onclick="form1()">Click To Fill Exam Form</button></td>
+          </tr>
+          <tr>
+            <td><br></td>
+          </tr>
+          <tr>
+            <td><button id="t2"type="button" style="height:60px;width:100%;background-color:#337ab7;border:none;color:white;border-radius:10px 10px 10px 10px;" onclick="formp()">Click To Print Exam Form</button></td>
+          </tr>
+          <tr>
+            <td><br></td>
+          </tr>
+          <tr>
+            <td><button id="t6"type="button" style="height:60px;width:100%;background-color:#337ab7;color:white;border:none;border-radius:10px 10px 10px 10px;" onclick="admit()">Click here To Get Admit Card</button></td>
+          </tr>
+          <tr>
+            <td><br></td>
+          </tr>
+          <tr>
+            <td><button id="t1" type="button" style="height:60px;width:100%;background-color:#337ab7;color:white;border:none;border-radius:10px 10px 10px 10px;" onclick="result()">Click For Result</button></td>
+          </tr>
+          </table>
+        </div>
+      </div>
+    </div><br>
+    <footer class="container" id="s4" style="height:40px;background-color:black;border-radius:4px;display:none">
+
+      <p style="color:white;text-align:center;">© 2019 <a href="tanweer.php" style="text-decoration:none;color:white;">Tanweer</a>. All Rights Reserved.</p>
+</footer><br>
+  </body>
+  <script>
+  setTimeout("bk()",2000)
+  function bk() {
+    document.getElementById("s1").style.display="block";
+    document.getElementById("s2").style.display="block";
+    document.getElementById("s3").style.display="block";
+    document.getElementById("s4").style.display="block";
+    document.getElementById("s5").style.display="none";
+  }
+  function result()
+  {
+    window.location.href="student/result.php";
+
+  }
+  function reg()
+  {
+    window.location.href="student/feedback3.php";
+  }
+  function admit()
+  {
+    window.location.href="student/admit.php";
+  }
+  function form1()
+  {
+    window.location.href="student/formfill.php";
+  }
+  function formp()
+  {
+    window.location.href="student/formprint.php";
+  }
+  </script>
+</html>
